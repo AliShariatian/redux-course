@@ -1,4 +1,5 @@
 import { ADD_TODO, DO_TODO, REMOVE_TODO, GET_ALL_TODOS } from "../Redux/actionsTypes.js";
+import store from "../Redux/store.js";
 
 ////////////////////////////////////////////////
 const todoInput = document.querySelector(".todo-input");
@@ -8,57 +9,22 @@ const filterTodo = document.querySelector(".filter-todo");
 
 ////////////////////////////////////////////////
 
-// Create Todolist Reducer
-function todolistReducer(state = [], action) {
-   switch (action.type) {
-      case ADD_TODO: {
-         const copyState = [...state]; // Copy of state
-         // Create new todo item
-         const newTodo = {
-            id: crypto.randomUUID(),
-            title: action.title,
-            isCompleted: false,
-         };
-         copyState.push(newTodo);
-         return copyState; // New state
-      }
-
-      case REMOVE_TODO: {
-         let copyState = [...state];
-         copyState = copyState.filter((todo) => todo.id !== action.id);
-         return copyState; // New state
-      }
-
-      case DO_TODO: {
-         const copyState = [...state];
-
-         copyState.forEach((todo) => {
-            if (todo.id === action.id) {
-               todo.isCompleted = !todo.isCompleted;
-            }
-         });
-         return copyState; // New state
-      }
-
-      case GET_ALL_TODOS: {
-         return state;
-      }
-
-      default: {
-         return state;
-      }
-   }
-}
-
-// Create Store
-const store = Redux.createStore(todolistReducer);
-
+// Run when state update
+store.subscribe(() => {
+   console.log("Store Updated! => Store new value: ", store.getState());
+});
 ////////////////////////////////////////////////
+
 // Add todo handler
 addTodoBtn.addEventListener("click", (event) => {
    event.preventDefault();
 
    const newTodoTitle = todoInput.value.trim();
+
+   if (!newTodoTitle) {
+      return null;
+   }
+
    store.dispatch({ type: ADD_TODO, title: newTodoTitle });
 
    const todos = store.getState();
