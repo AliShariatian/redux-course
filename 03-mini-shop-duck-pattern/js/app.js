@@ -1,6 +1,6 @@
 import store from "../Redux/store.js";
-import { addProductAction, getProductStartAction } from "../Redux/Products/actionCreators.js";
-import { addArticleAction } from "../Redux/Articles/actionCreators.js";
+import { addProductAction, getProductStartAction } from "../Redux/store/Products.js";
+import { addArticleAction } from "../Redux/store/Article.js";
 
 let count = 0;
 store.subscribe(() => console.log(`Store Updated (${count++}):`, store.getState()));

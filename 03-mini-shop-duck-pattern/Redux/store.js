@@ -1,7 +1,7 @@
 // import reducers
-import articlesReducer from "./Articles/reducer.js";
-import commentsReducer from "./Comments/reducer.js";
-import productsReducer from "./Products/reducer.js";
+import articlesReducer from "./store/Article.js";
+import commentsReducer from "./store/Comments.js";
+import productsReducer from "./store/Products.js";
 
 // import middleware
 import logger from "./middlewares/logger.js";

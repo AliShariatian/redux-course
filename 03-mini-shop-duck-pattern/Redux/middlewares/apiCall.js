@@ -1,8 +1,7 @@
-import { GET_PRODUCT_START } from "../Products/actionTypes.js";
-import { getProductSuccessAction, getProductErrorAction } from "../Products/actionCreators.js";
+import { getProductSuccessAction, getProductErrorAction } from "../store/Products.js";
 
 const apiCall = (store) => (next) => (action) => {
-   if (action.type !== GET_PRODUCT_START) {
+   if (action.type !== "GET_PRODUCT_START") {
       // Go to next middleware
       return next(action);
    }
