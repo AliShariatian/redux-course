@@ -10,9 +10,14 @@ const filterTodo = document.querySelector(".filter-todo");
 ////////////////////////////////////////////////
 
 // Run when state update
-store.subscribe(() => {
+const unSubscribe = store.subscribe(() => {
    console.log("Store Updated! => Store new value: ", store.getState());
 });
+
+setTimeout(() => {
+   // Cancel subscribe after 15 second
+   unSubscribe();
+}, 15000);
 ////////////////////////////////////////////////
 
 // Add todo handler
