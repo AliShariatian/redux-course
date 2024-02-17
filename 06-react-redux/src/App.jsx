@@ -1,9 +1,10 @@
-import React from 'react'
+// import TodoList_Way1 from "./Components/TodoList_Way1";
+import TodoList_Way2 from "./Components/TodoList_Way2";
 
-import './App.css'
+const App = () => {
+   // Way 2 is Recommended
+   return <TodoList_Way2 />;
+};
 
-export default function App() {
-  return (
-    <h1>React-Redux</h1>
-  )
-}
+export default App;
+
