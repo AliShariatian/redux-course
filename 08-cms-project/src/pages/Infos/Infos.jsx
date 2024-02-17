@@ -48,8 +48,8 @@ export default function Infos() {
                            <form action="#" className="form row mx-0">
                               <div className="form__box-input col-6 px-2">
                                  <span className="fa fa-user form__icon"></span>
-                                 <input type="text" name="" value="" id="firstname" placeholder="نام " className="form-control form__input" required />
-                                 <label for="firstname" className="form__label my-0">
+                                 <input type="text" name="" id="firstname" placeholder="نام " className="form-control form__input" required />
+                                 <label htmlFor="firstname" className="form__label my-0">
                                     نام
                                  </label>
                               </div>
@@ -57,8 +57,8 @@ export default function Infos() {
                               <div className="form__box-input col-6 px-2">
                                  <span className="fa fa-users form__icon"></span>
 
-                                 <input type="text" name="" value="" id="lastname" placeholder="نام خانوادگی" className="form-control form__input" required />
-                                 <label for="lastname" className="form__label my-0">
+                                 <input type="text" name="" id="lastname" placeholder="نام خانوادگی" className="form-control form__input" required />
+                                 <label htmlFor="lastname" className="form__label my-0">
                                     نام خانوادگی
                                  </label>
                               </div>
@@ -66,8 +66,8 @@ export default function Infos() {
                               <div className="form__box-input col-6 px-2">
                                  <span className="fa fa-address-book form__icon"></span>
 
-                                 <input lang="en" type="text" name="" value="" id="username" placeholder="نام کاربری" className="form-control form__input" required />
-                                 <label for="username" className="form__label my-0">
+                                 <input lang="en" type="text" name="" id="username" placeholder="نام کاربری" className="form-control form__input" required />
+                                 <label htmlFor="username" className="form__label my-0">
                                     نام کاربری
                                  </label>
                               </div>
@@ -75,8 +75,8 @@ export default function Infos() {
                               <div className="form__box-input col-6 px-2">
                                  <span className="fa fa-globe form__icon"></span>
 
-                                 <input lang="en" type="email" name="" value="" id="email" placeholder="email " className="form-control form__input" required />
-                                 <label for="email" className="form__label my-0" lang="en">
+                                 <input lang="en" type="email" name="" id="email" placeholder="email " className="form-control form__input" required />
+                                 <label htmlFor="email" className="form__label my-0" lang="en">
                                     email
                                  </label>
                               </div>
@@ -84,8 +84,8 @@ export default function Infos() {
                               <div className="form__box-input col-4 px-2">
                                  <span className="fa fa-key form__icon"></span>
 
-                                 <input type="password" name="" id="password" placeholder="رمز جاری" className="form-control form__input" required />
-                                 <label for="password" className="form__label my-0">
+                                 <input type="password" name="" id="currentPassword" placeholder="رمز جاری" className="form-control form__input" required />
+                                 <label htmlFor="password" className="form__label my-0">
                                     رمز جاری
                                  </label>
                                  <span className="fa fa-key form__icon"></span>
@@ -93,15 +93,15 @@ export default function Infos() {
                               <div className="form__box-input col-4 px-2">
                                  <span className="fa fa-key form__icon"></span>
 
-                                 <input type="password" name="" id="password" placeholder="رمز  جدید" className="form-control form__input" required />
-                                 <label for="password" className="form__label my-0">
+                                 <input type="password" name="" id="newPassword1" placeholder="رمز  جدید" className="form-control form__input" required />
+                                 <label htmlFor="password" className="form__label my-0">
                                     رمز جدید
                                  </label>
                                  <span className="fa fa-key form__icon"></span>
                               </div>
                               <div className="form__box-input col-4 px-2">
-                                 <input type="password" name="" id="password" placeholder="تکرار رمز" className="form-control form__input" required />
-                                 <label for="password" className="form__label my-0">
+                                 <input type="password" name="" id="newPassword2" placeholder="تکرار رمز" className="form-control form__input" required />
+                                 <label htmlFor="password" className="form__label my-0">
                                     تکرار رمز
                                  </label>
                                  <span className="fa fa-key form__icon"></span>
@@ -110,14 +110,14 @@ export default function Infos() {
                               <div className="change-profile-box px-0 d-flex gap-4 mb-4">
                                  <div className="change-profile-input-box">
                                     <img src="../../img/admin/profile/banana.png" className="change-profile-pic" alt="" />
-                                    <label for="upload-profile-input" className="upload-profile-input-label">
+                                    <label htmlFor="upload-profile-input" className="upload-profile-input-label">
                                        <input type="file" id="upload-profile-input" name="" />
                                     </label>
                                  </div>
 
                                  <div className="change-banner-input-box">
                                     <img src="../../img/admin/banner/banner.png" className="change-banner-pic" alt="" />
-                                    <label for="upload-banner-input" className="upload-banner-input-label">
+                                    <label htmlFor="upload-banner-input" className="upload-banner-input-label">
                                        <input type="file" id="upload-banner-input" name="" />
                                     </label>
                                  </div>

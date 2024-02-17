@@ -1,11 +1,11 @@
-export default function CourseBox() {
+export default function CourseBox({ category, title, price, discount, registersCount, desc }) {
    return (
       <div className="products__item">
          <img src="../../img/store/redux.png" alt="product-img-1" className="products__img" />
          <div className="products__details w-100">
             <div className="products__info">
-               <h3 className="products__name">دوره متخصص ریداکس</h3>
-               <p className="products__short-desc">لورم ایپسوم متن ساختگی برای پروتوتایپ اپلیکیشن های ...</p>
+               <h3 className="products__name">{title}</h3>
+               <p className="products__short-desc">{desc}</p>
             </div>
             <div className="products__tags">
                <div className="products__boxes">
@@ -13,19 +13,19 @@ export default function CourseBox() {
                      <span className="fa fa-wallet"></span>
 
                      <span className="product__teg-text">قیمت :</span>
-                     <span className="product__teg-text products__price-value">35000</span>
+                     <span className="product__teg-text products__price-value">{price === 0 ? "رایگان" : price.toLocaleString()}</span>
                   </div>
                   <div className="products__category-box">
                      <span className="fa fa-folder"></span>
 
                      <span className="product__teg-text">دسته بندی:</span>
-                     <span className="product__teg-text products__category">فرانت اند</span>
+                     <span className="product__teg-text products__category">{category}</span>
                   </div>
                   <div className="products__shop-box">
                      <span className="fa fa-users"></span>
 
-                     <span className="product__teg-text">تعداد فروش :</span>
-                     <span className="product__teg-text products__sell">10</span>
+                     <span className="product__teg-text">تعداد ثبت‌نامی :</span>
+                     <span className="product__teg-text products__sell">{registersCount}</span>
                   </div>
                </div>
                <div className="products__btns">
@@ -35,7 +35,7 @@ export default function CourseBox() {
             </div>
          </div>
 
-         <div className="product__discount-Box">30%</div>
+         <div className="product__discount-Box">{discount}%</div>
       </div>
    );
 }
