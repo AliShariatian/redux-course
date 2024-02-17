@@ -20,7 +20,7 @@
   
 -  `Redux-Thunk` is a middleware.
   
--  For work with a asynchronous _action_ we use `redux-thunk` package.
+-  For work with a asynchronous _actions_ we use `redux-thunk` package.
   
 -  For log on a project that used redux we can use `Redux-Logger` middleware for monitoring, (lesson 57).
   
@@ -28,4 +28,8 @@
   
 -  For use redux in react project, we use `Redux` and `React-Redux` packages.
   
--  
+-  `Redux-Toolkit`: For work with a asynchronous _actions_, _Redux-devtools_ auto config and...; this package is very easy.
+  
+-  In `Redux-Toolkit`, the reducer can be an impure function.
+  
+-  In `Redux-Toolkit` we create a resource for every existence (Products, Comments, Posts, Articles, Users and...).
