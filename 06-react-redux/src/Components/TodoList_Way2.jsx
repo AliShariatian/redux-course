@@ -1,19 +1,25 @@
 // Way 2 => Recommended
 
 import { useState } from "react";
+import Todo from "./Todo";
+
+// Redux
 import { useDispatch, useSelector } from "react-redux";
 import { addTodoAction } from "../Redux/store/TodoList";
-import Todo from "./Todo";
 
 const TodoList = () => {
    const [title, setTitle] = useState("");
 
+   // Redux
    const dispatch = useDispatch();
    const todos = useSelector((state) => state.todos);
-
+   
    const addTodoHandler = (ev) => {
       ev.preventDefault();
+      
+      // Redux
       dispatch(addTodoAction(title));
+
       setTitle("");
    };
 
