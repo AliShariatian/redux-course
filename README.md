@@ -10,4 +10,6 @@
 -  `Currying` role: in lesson 46, [link](https://javascript.info/currying-partials).
 -  `Ducks` redux folder structure (lesson 51) [link1](https://medium.com/@scbarrus/the-ducks-file-structure-for-redux-d63c41b7035c), [link2](https://github.com/erikras/ducks-modular-redux).
 -  Middlewares are executed in order.
+-  `Redux-Thunk` is a middleware.
+-  For work with a asynchronous _action_ we use `redux-thunk` package.
 -  For use redux in react project, we use `React-Redux` package.
