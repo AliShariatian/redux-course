@@ -9,10 +9,9 @@ import "./Courses.css";
 export default function Courses() {
    const courses = useSelector((state) => state.courses);
    const dispatch = useDispatch();
-   console.log(courses);
 
    useEffect(() => {
-      dispatch(getCoursesFromServer("https://redux-cms.iran.liara.run/api/courses"));
+      dispatch(getCoursesFromServer());
    }, []);
 
    return (

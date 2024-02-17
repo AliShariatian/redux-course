@@ -1,8 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 // Async action
-export const getCoursesFromServer = createAsyncThunk("courses/getCoursesFromServer", async (url) => {
-   return fetch(url)
+export const getCoursesFromServer = createAsyncThunk("courses/getCoursesFromServer", async () => {
+   return fetch("https://redux-cms.iran.liara.run/api/courses")
       .then((res) => res.json())
       .then((data) => data);
 });

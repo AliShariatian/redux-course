@@ -12,7 +12,7 @@ export default function Articles() {
    const dispatch = useDispatch();
 
    useEffect(() => {
-      dispatch(getArticlesFromServer("https://redux-cms.iran.liara.run/api/articles"));
+      dispatch(getArticlesFromServer());
    }, []);
 
    return (

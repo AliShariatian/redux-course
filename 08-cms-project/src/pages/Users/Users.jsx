@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserFromServer } from "../../Redux/store/users";
+import { getUsersFromServer } from "../../Redux/store/users";
 
 import UserItem from "../../components/UserItem/UserItem";
 import "./Users.css";
@@ -11,7 +11,7 @@ export default function Users() {
    const dispatch = useDispatch();
 
    useEffect(() => {
-      dispatch(getUserFromServer("https://redux-cms.iran.liara.run/api/users"));
+      dispatch(getUsersFromServer());
    }, []);
 
    return (
